@@ -1,0 +1,10 @@
+[
+	{
+		"accountType": "Savings",
+		"initialDeposit": "50000"
+	},
+	{
+		"accountType": "Savings",
+		"initialDeposit": "10000"
+	}
+]

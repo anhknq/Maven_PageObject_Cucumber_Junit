@@ -1,0 +1,14 @@
+[
+	{
+		"customerName": "Ann",
+		"gender": "f",
+		"dateOfBirth": "2019-12-01",
+		"address": "PO Box 911 8331 Duis Avenue",
+		"city": "Tampa",
+		"state": "FL",
+		"pin": "466250",
+		"mobileNumber": "4555442476",
+		"email": "automation%s@gmail.com",
+		"password": "automation"
+	}
+]

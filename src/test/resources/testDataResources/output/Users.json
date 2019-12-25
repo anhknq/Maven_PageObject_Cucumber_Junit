@@ -1,0 +1,76 @@
+[
+  {
+    "registerEmail": "testBankGuru11114@gmail.com",
+    "userID": "mngr239203",
+    "password": "burYdEz",
+    "customer": [
+      {
+        "customerID": "37507",
+        "customerName": "Ann",
+        "gender": "female",
+        "dateOfBirth": "2019-12-01",
+        "address": "PO Box 911 8331 Duis Avenue",
+        "city": "Tampa",
+        "state": "FL",
+        "pin": "466250",
+        "mobileNumber": "4555442476",
+        "email": "automation93863@gmail.com"
+      },
+      {
+        "customerID": "34992",
+        "customerName": "Ann",
+        "gender": "female",
+        "dateOfBirth": "2019-12-01",
+        "address": "PO Box 911 8331 Duis Avenue",
+        "city": "Tampa",
+        "state": "FL",
+        "pin": "466250",
+        "mobileNumber": "4555442476",
+        "email": "automation5662@gmail.com"
+      }
+    ]
+  },
+  {
+    "registerEmail": "testBankGuru11115@gmail.com",
+    "userID": "mngr239268",
+    "password": "zymEgyq",
+    "customer": [
+      {
+        "customerID": "62678",
+        "customerName": "Ann",
+        "gender": "female",
+        "dateOfBirth": "2019-12-01",
+        "address": "1883 Cursus Avenue",
+        "city": "Houston",
+        "state": "Texas",
+        "pin": "166455",
+        "mobileNumber": "5555442476",
+        "email": "new1_automation95176@gmail.com"
+      },
+      {
+        "customerID": "31330",
+        "customerName": "Ann",
+        "gender": "female",
+        "dateOfBirth": "2019-12-01",
+        "address": "2883 Cursus Avenue",
+        "city": "Houston",
+        "state": "Texas",
+        "pin": "166455",
+        "mobileNumber": "5555442476",
+        "email": "new2_automation66778@gmail.com"
+      },
+      {
+        "customerID": "41604",
+        "customerName": "Ann",
+        "gender": "female",
+        "dateOfBirth": "2019-12-01",
+        "address": "PO Box 911 8331 Duis Avenue",
+        "city": "Tampa",
+        "state": "FL",
+        "pin": "466250",
+        "mobileNumber": "4555442476",
+        "email": "automation85470@gmail.com"
+      }
+    ]
+  }
+]

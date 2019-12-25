@@ -1,0 +1,16 @@
+stepDefinitions\EditAccountPageSteps.class
+stepDefinitions\EditCustomerPageSteps.class
+stepDefinitions\ResgisterPageSteps.class
+stepDefinitions\FundTransferPageSteps.class
+stepDefinitions\Hooks$BrowserCleanup.class
+stepDefinitions\Hooks$1.class
+stepDefinitions\WithdrawalPageSteps.class
+stepDefinitions\HomePageSteps.class
+stepDefinitions\NewAccountPageSteps.class
+shareContexts\ShareDataContext.class
+stepDefinitions\LoginPageSteps.class
+runners\TestRunner.class
+stepDefinitions\DepositPageSteps.class
+stepDefinitions\DynamicPageSteps.class
+stepDefinitions\Hooks.class
+stepDefinitions\NewCustomerPageSteps.class
