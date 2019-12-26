@@ -37,7 +37,7 @@ public class DepositPageObject extends AbstractPage {
 		isDataInTableRowEquals(driver, "Current Balance", String.valueOf(balance));
 	}
 
-	public Transaction saveDepositInfo() {
+	public Transaction getDepositInfo() {
 		Transaction trans = new Transaction();
 		trans.setTransactionID(getDynamicDataInTable(driver, "Transaction ID"));
 		trans.setAccountID(getDynamicDataInTable(driver, "Account No"));

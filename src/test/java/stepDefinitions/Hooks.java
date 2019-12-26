@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import org.apache.log4j.Logger;
+import org.junit.BeforeClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +28,7 @@ public class Hooks {
 
 	private final String workingDir = System.getProperty("user.dir");
 
-	@Before(order = 2)
+	@BeforeClass
 	public void deleteAllFileScreenshot() {
 		deleteAllFileInFolder();
 	}

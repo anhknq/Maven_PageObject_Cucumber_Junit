@@ -8,8 +8,10 @@ Feature: DEPOSIT
     When enter Login info
     And click Login button at Login page
 
+  @paymentflow
   Scenario Outline: Transfer money into a current account and check account balance equal 55,000
-    Given open "Deposit" page
+    Given read data Transaction input
+    And open "Deposit" page
     When enter Deposit details <index>
     And click "Submit" button
     Then verify message on page Deposit displayed <index>

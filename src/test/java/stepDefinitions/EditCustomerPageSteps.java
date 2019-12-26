@@ -35,7 +35,7 @@ public class EditCustomerPageSteps {
 	
 	@When("^enter CustomerID at Edit Customer page (\\d+)$")
 	public void enterCustomerIDAtEditCustomerPage(int indexOfCustomerInList) {
-		customerToEdit = FileReaderManager.getInstance().getJsonReader().getCustomerByEmail(0, indexOfCustomerInList);
+		customerToEdit = FileReaderManager.getInstance().getJsonReader().getCustomerInUsersByEmail(0, indexOfCustomerInList);
 		editCustomerPage.enterCustomerID(customerToEdit.getCustomerID());
 	}
 	
@@ -56,7 +56,7 @@ public class EditCustomerPageSteps {
 	
 	@Then("^save Edit Customer Info$")
 	public void saveEditCustomerInfo() {
-		Customer cus = editCustomerPage.saveEditCustomerInfo();
+		Customer cus = editCustomerPage.getEditCustomerInfo();
 		FileReaderManager.getInstance().getJsonWriter().updateEditCustomer(cus, cus.getCustomerID());
 	}
 

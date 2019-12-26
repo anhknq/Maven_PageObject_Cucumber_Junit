@@ -27,7 +27,7 @@ public class EditAccountPageSteps {
        	
 	@Given("^enter AccountID at Edit Account page$")
 	public void enterAccountIDAtEditAccountPage() {
-		accountToEdit = FileReaderManager.getInstance().getJsonReader().getAccountData().get(0);
+		accountToEdit = FileReaderManager.getInstance().getJsonReader().getAccountsData().get(0);
 		editAccountPage.enterAccountID(accountToEdit.getAccountID());
 	}
 
@@ -49,7 +49,7 @@ public class EditAccountPageSteps {
 
 	@Then("^save Edit Account Info$")
 	public void saveEditAccountInfo() {
-		Account acc = editAccountPage.saveEditAccountInfo();
+		Account acc = editAccountPage.getEditAccountInfo();
 		FileReaderManager.getInstance().getJsonWriter().updateEditAccount(acc, acc.getAccountID());
 	}
 

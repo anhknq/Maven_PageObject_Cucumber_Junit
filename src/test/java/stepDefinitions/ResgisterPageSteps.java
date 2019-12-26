@@ -6,11 +6,9 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 import cucumber.TestContext;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import dataProvider.FileReaderManager;
-import enums.Context;
 import managers.PageFactoryManager;
 import pageObjects.RegisterPageObject;
 import testData.RegisterEmail;
@@ -56,11 +54,6 @@ public class ResgisterPageSteps extends AbstractPage{
 		User user = registerPage.getLoginInfo();
 		user.setRegisterEmail(emailID);
 		FileReaderManager.getInstance().getJsonWriter().addNewUser(user);
-	}
-
-	@Given("^open Login page$")
-	public void openLoginPage() {
-		registerPage.openLoginPageUrl((String) testContext.scenarioContext.getContext(Context.LOGIN_URL));
 	}
 
 }

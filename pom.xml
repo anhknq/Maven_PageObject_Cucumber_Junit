@@ -5,8 +5,8 @@
 	<groupId>Cucumber_Maven_Project</groupId>
 	<artifactId>Cucumber_Maven_Project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Cucumber_Maven_Project</name>
-	<description>Cucumber_Maven_Project</description>
+	<name>Maven_PageObject_Cucumber_JUnit</name>
+	<description>Maven_PageObject_Cucumber_JUnit</description>
 
 	<properties>
 		<cucumber.version> 1.2.4 </cucumber.version>
@@ -134,7 +134,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>Cucumber_Maven_Project</projectName>
+							<projectName>Maven_PageObject_Cucumber_JUnit</projectName>
 							<inputDirectory>${project.build.directory}/site</inputDirectory>
 							<outputDirectory>${project.build.directory}/site/cucumber-report-html</outputDirectory>
 							<enableFlashCharts>true</enableFlashCharts>

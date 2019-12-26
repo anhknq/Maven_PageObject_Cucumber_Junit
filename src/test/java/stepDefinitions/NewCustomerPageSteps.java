@@ -36,7 +36,7 @@ public class NewCustomerPageSteps {
 
 	@Given("^save New Customer Info$")
 	public void saveNewCustomerInfo() {
-		Customer cus = newCustomerPage.saveNewCustomerInfo();
+		Customer cus = newCustomerPage.getNewCustomerInfo();
 		RegisterEmail email = FileReaderManager.getInstance().getJsonReader().getEmailData().get(0);
 		FileReaderManager.getInstance().getJsonWriter().addNewCustomer(cus, email.getEmailID());
 	}

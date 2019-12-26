@@ -8,7 +8,8 @@ Feature: DELETE CUSTOMER
     When enter Login info
     And click Login button at Login page
 
-  Scenario Outline: Delete first customer and check deleted successfully
+  @paymentflow
+  Scenario: Delete first customer and check deleted successfully
     Given open "Delete Customer" page
     When enter CustomerID at Delete Customer page
     And click "Submit" button
@@ -17,5 +18,5 @@ Feature: DELETE CUSTOMER
     And delete customer
     Given open "Edit Customer" page
     When enter Deleted CustomerID at Edit Customer page
-    And click to "Submit" button
+    And click "Submit" button
     Then verify alert message "Customer does not exist!!" displayed and accept

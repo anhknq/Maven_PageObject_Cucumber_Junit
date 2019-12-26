@@ -26,14 +26,14 @@ public class DeleteCustomerPageSteps {
 
 	@When("^enter CustomerID at Delete Customer page$")
 	public void enterCustomerIDAtDeleteCustomerPage() {
-		customer = FileReaderManager.getInstance().getJsonReader().getCustomerByEmail(0, 0);
+		customer = FileReaderManager.getInstance().getJsonReader().getCustomerInUsersByEmail(0, 0);
 		customerID = customer.getCustomerID();
 		deleteCustomerPage.entercustomerID(customerID);
 		testContext.scenarioContext.setContext(Context.CUSTOMER_ID, customerID);
 	}
 
-	@Then("^delete customer (\\d+)$")
-	public void deleteCustomer(int index) {
+	@Then("^delete customer$")
+	public void deleteCustomer() {
 		FileReaderManager.getInstance().getJsonWriter().deleteCustomer(customerID);
 	}
 }

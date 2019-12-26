@@ -8,14 +8,15 @@ Feature: DELETE ACCOUNT
     When enter Login info
     And click Login button at Login page
 
+  @paymentflow
   Scenario Outline: Delete all account of an customer and check deleted successfully
-  #1st customer of 1st email in list User
+    #delete all accounts of 1st customer of 1st email in list User
     Given open "Delete Account" page
-    When enter AccountID at Delete Account page <index>
+    When enter AccountID at Delete Account page
     And click "Submit" button
     Then verify alert message "Do you really want to delete this Account?" displayed and accept
     And verify alert message "Account Deleted Sucessfully" displayed and accept
-    And delete account <index>
+    And delete account
     Given open "Edit Account" page
     When enter Deleted AccountID at Edit Account page
     And click "Submit" button

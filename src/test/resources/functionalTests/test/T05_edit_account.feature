@@ -8,6 +8,7 @@ Feature: EDIT ACCOUNT
     When enter Login info
     And click Login button at Login page
 
+  @paymentflow
   Scenario: Edit first account and check type of Account is 'Current'
     Given open "Edit Account" page
     And enter AccountID at Edit Account page

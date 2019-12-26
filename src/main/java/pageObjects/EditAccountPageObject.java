@@ -31,7 +31,7 @@ public class EditAccountPageObject extends AbstractPage{
 		isDataInTableRowEquals(driver, "Current Amount", String.valueOf(accountToEdit.getCurrentAmount()));
 	}
 
-	public Account saveEditAccountInfo() {
+	public Account getEditAccountInfo() {
 		Account acc = new Account();
 		acc.setCustomerID(getDynamicDataInTable(driver, "Customer ID"));
 		acc.setAccountID(getDynamicDataInTable(driver, "Account ID"));

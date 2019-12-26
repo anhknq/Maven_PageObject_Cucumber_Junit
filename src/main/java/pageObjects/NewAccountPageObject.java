@@ -32,7 +32,7 @@ public class NewAccountPageObject extends AbstractPage {
 		isDataInTableRowEquals(driver, "Current Amount", String.valueOf(account.getInitialDeposit()));
 	}
 
-	public Account saveNewAccountInfo() {
+	public Account getNewAccountInfo() {
 		Account acc = new Account();
 		acc.setCustomerID(getDynamicDataInTable(driver, "Customer ID"));
 		acc.setAccountID(getDynamicDataInTable(driver, "Account ID"));

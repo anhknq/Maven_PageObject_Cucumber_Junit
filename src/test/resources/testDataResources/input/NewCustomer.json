@@ -10,5 +10,17 @@
 		"mobileNumber": "4555442476",
 		"email": "automation%s@gmail.com",
 		"password": "automation"
+	},
+	{
+		"customerName": "Jack",
+		"gender": "m",
+		"dateOfBirth": "2008-12-01",
+		"address": "58693 Shoshone Parkway",
+		"city": "Tacoma",
+		"state": "Washington",
+		"pin": "246625",
+		"mobileNumber": "2455544247",
+		"email": "secondautomation%s@gmail.com",
+		"password": "999999"
 	}
 ]

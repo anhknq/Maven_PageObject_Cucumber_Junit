@@ -17,26 +17,26 @@ public class JsonDataWriter {
 
 	private final static String userFilePath = FileReaderManager.getInstance().getConfigReader()
 			.getOutputTestDataResourcePath() + "Users.json";
-	private final static String accountFilePath = FileReaderManager.getInstance().getConfigReader()
+	private final static String accountsFilePath = FileReaderManager.getInstance().getConfigReader()
 			.getOutputTestDataResourcePath() + "Accounts.json";
-	private final static String transactionFilePath = FileReaderManager.getInstance().getConfigReader()
+	private final static String transactionsFilePath = FileReaderManager.getInstance().getConfigReader()
 			.getOutputTestDataResourcePath() + "Transactions.json";
 
-	private List<User> userList;
-	private List<Account> accountList;
+	private List<User> usersList;
+	private List<Account> accountsList;
 	private List<Transaction> transList;
 
 	public JsonDataWriter() {
-		userList = FileReaderManager.getInstance().getJsonReader().getUserData();
-		accountList = FileReaderManager.getInstance().getJsonReader().getAccountData();
-		transList = FileReaderManager.getInstance().getJsonReader().getTransactionOuput();
+		usersList = FileReaderManager.getInstance().getJsonReader().getUsersData();
+		accountsList = FileReaderManager.getInstance().getJsonReader().getAccountsData();
+		transList = FileReaderManager.getInstance().getJsonReader().getTransactionsOuput();
 	}
 
 	public void addNewUser(User user) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		userList.add(user);
+		usersList.add(user);
 		try (FileWriter writer = new FileWriter(userFilePath)) {
-			gson.toJson(userList, writer);
+			gson.toJson(usersList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -44,7 +44,7 @@ public class JsonDataWriter {
 
 	public void addNewCustomer(Customer newCustomer, String registerEmail) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		for (User u : userList) {
+		for (User u : usersList) {
 			if (u.getRegisterEmail().equalsIgnoreCase(registerEmail)) {
 				if (u.getCustomer() == null) {
 					List<Customer> newCustomerList = new ArrayList<Customer>();
@@ -56,7 +56,7 @@ public class JsonDataWriter {
 			}
 		}
 		try (FileWriter writer = new FileWriter(userFilePath)) {
-			gson.toJson(userList, writer);
+			gson.toJson(usersList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -64,7 +64,7 @@ public class JsonDataWriter {
 
 	public void updateEditCustomer(Customer editCustomer, String customerID) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		for (User u : userList) {
+		for (User u : usersList) {
 			for (int i = 0; i < u.getCustomer().size(); i++) {
 				if (u.getCustomer().get(i).getCustomerID().equalsIgnoreCase(customerID)) {
 					// error ConcurrentModificationException when use for each: use for loop
@@ -74,7 +74,7 @@ public class JsonDataWriter {
 			}
 		}
 		try (FileWriter writer = new FileWriter(userFilePath)) {
-			gson.toJson(userList, writer);
+			gson.toJson(usersList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -82,14 +82,15 @@ public class JsonDataWriter {
 
 	public void deleteCustomer(String customerID) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		for (User u : userList) {
+		for (User u : usersList) {
 			for (int i = 0; i < u.getCustomer().size(); i++) {
 				if (u.getCustomer().get(i).getCustomerID().equalsIgnoreCase(customerID)) {
 					u.getCustomer().remove(i);
+					break;
 				}
 			}
 			try (FileWriter writer = new FileWriter(userFilePath)) {
-				gson.toJson(userList, writer);
+				gson.toJson(usersList, writer);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -98,9 +99,9 @@ public class JsonDataWriter {
 
 	public void addNewAccount(Account account) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		accountList.add(account);
-		try (FileWriter writer = new FileWriter(accountFilePath)) {
-			gson.toJson(accountList, writer);
+		accountsList.add(account);
+		try (FileWriter writer = new FileWriter(accountsFilePath)) {
+			gson.toJson(accountsList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -108,14 +109,14 @@ public class JsonDataWriter {
 
 	public void updateEditAccount(Account acc, String accountID) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		for (int i = 0; i < accountList.size(); i++) {
-			if (accountList.get(i).getAccountID().equalsIgnoreCase(accountID)) {
-				accountList.remove(i);
-				accountList.add(i, acc);
+		for (int i = 0; i < accountsList.size(); i++) {
+			if (accountsList.get(i).getAccountID().equalsIgnoreCase(accountID)) {
+				accountsList.remove(i);
+				accountsList.add(i, acc);
 			}
 		}
-		try (FileWriter writer = new FileWriter(accountFilePath)) {
-			gson.toJson(accountList, writer);
+		try (FileWriter writer = new FileWriter(accountsFilePath)) {
+			gson.toJson(accountsList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -123,13 +124,14 @@ public class JsonDataWriter {
 
 	public void deleteAccount(Account account) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		for (int i = 0; i < accountList.size(); i++) {
-			if (accountList.get(i).getAccountID().equalsIgnoreCase(account.getAccountID())) {
-				accountList.remove(i);
+		for (int i = 0; i < accountsList.size(); i++) {
+			if (accountsList.get(i).getAccountID().equalsIgnoreCase(account.getAccountID())) {
+				accountsList.remove(i);
+				break;
 			}
 		}
-		try (FileWriter writer = new FileWriter(accountFilePath)) {
-			gson.toJson(accountList, writer);
+		try (FileWriter writer = new FileWriter(accountsFilePath)) {
+			gson.toJson(accountsList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -137,13 +139,13 @@ public class JsonDataWriter {
 
 	public void updateBalance(String accountID, int balance) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-		for (int i = 0; i < accountList.size(); i++) {
-			if (accountList.get(i).getAccountID().equalsIgnoreCase(accountID)) {
-				accountList.get(i).setCurrentAmount(balance);
+		for (int i = 0; i < accountsList.size(); i++) {
+			if (accountsList.get(i).getAccountID().equalsIgnoreCase(accountID)) {
+				accountsList.get(i).setCurrentAmount(balance);
 			}
 		}
-		try (FileWriter writer = new FileWriter(accountFilePath)) {
-			gson.toJson(accountList, writer);
+		try (FileWriter writer = new FileWriter(accountsFilePath)) {
+			gson.toJson(accountsList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -152,7 +154,7 @@ public class JsonDataWriter {
 	public void addNewTransaction(Transaction trans) {
 		Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
 		transList.add(trans);
-		try (FileWriter writer = new FileWriter(transactionFilePath)) {
+		try (FileWriter writer = new FileWriter(transactionsFilePath)) {
 			gson.toJson(transList, writer);
 		} catch (IOException e) {
 			e.printStackTrace();

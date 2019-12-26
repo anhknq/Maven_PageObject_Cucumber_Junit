@@ -8,7 +8,8 @@ Feature: ADD NEW CUSTOMER
     When enter Login info
     And click Login button at Login page
 
-  Scenario Outline: Create new customer and check created successfully
+  @paymentflow
+  Scenario Outline: Create 2 customers and check created successfully
     Given read data NewCustomer_Input
     And open "New Customer" page
     When enter New Customer details <index>
@@ -21,3 +22,6 @@ Feature: ADD NEW CUSTOMER
     Examples: Index of Customer in list
       | index |
       |     0 |
+#each row 'index' = 1 new customer
+#total of rows 'index' must <= with total of records in NewAccount.json
+#or it will throw error 'out of boundary'

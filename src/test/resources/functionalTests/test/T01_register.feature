@@ -4,6 +4,7 @@ Feature: REGISTER
   I want to register an account
   So that verify register function work well
 
+  @paymentflow
   Scenario: Register and Login to system
     Given get Login page Url
     When click Here link

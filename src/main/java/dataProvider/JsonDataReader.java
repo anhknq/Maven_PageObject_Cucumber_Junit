@@ -29,9 +29,9 @@ public class JsonDataReader {
 	private final String transactionFilePath = FileReaderManager.getInstance().getConfigReader()
 			.getInputTestDataResourcePath() + "Transaction.json";
 
-	private final String userFilePath = FileReaderManager.getInstance().getConfigReader()
+	private final String usersFilePath = FileReaderManager.getInstance().getConfigReader()
 			.getOutputTestDataResourcePath() + "Users.json";
-	private final String accountFilePath = FileReaderManager.getInstance().getConfigReader()
+	private final String accountsFilePath = FileReaderManager.getInstance().getConfigReader()
 			.getOutputTestDataResourcePath() + "Accounts.json";
 	private final String transactionsFilePath = FileReaderManager.getInstance().getConfigReader()
 			.getOutputTestDataResourcePath() + "Transactions.json";
@@ -62,15 +62,15 @@ public class JsonDataReader {
 		}
 	}
 
-	public List<User> getUserData() {
+	public List<User> getUsersData() {
 		Gson gson = new Gson();
 		BufferedReader bufferReader = null;
 		try {
-			bufferReader = new BufferedReader(new FileReader(userFilePath));
+			bufferReader = new BufferedReader(new FileReader(usersFilePath));
 			List<User> users = new LinkedList<>(Arrays.asList(gson.fromJson(bufferReader, User[].class)));
 			return users;
 		} catch (FileNotFoundException e) {
-			throw new RuntimeException("Json file not found at path : " + userFilePath);
+			throw new RuntimeException("Json file not found at path : " + usersFilePath);
 		} finally {
 			try {
 				if (bufferReader != null)
@@ -81,7 +81,7 @@ public class JsonDataReader {
 	}
 
 	public User getUserByUserID(String userID) {
-		userList = getUserData();
+		userList = getUsersData();
 		for (User user : userList) {
 			if (user.getUserID().equalsIgnoreCase(userID))
 				return user;
@@ -90,10 +90,11 @@ public class JsonDataReader {
 	}
 
 	public User getUserByEmail(String email) {
-		userList = getUserData();
+		userList = getUsersData();
 		for (User user : userList) {
-			if (user.getRegisterEmail().equalsIgnoreCase(email))
+			if (user.getRegisterEmail().equalsIgnoreCase(email)) {
 				return user;
+			}
 		}
 		return null;
 	}
@@ -125,16 +126,16 @@ public class JsonDataReader {
 	}
 
 	public String getCustomerIDByEmail(int indexOfEmailInList, int indexOfCustomerInList) {
-		return getCustomerByEmail(indexOfEmailInList, indexOfCustomerInList).getCustomerID();
+		return getCustomerInUsersByEmail(indexOfEmailInList, indexOfCustomerInList).getCustomerID();
 	}
 
-	public Customer getCustomerByEmail(int indexOfEmailInList, int indexOfCustomerInList) {
-		String email = getEmailInList(indexOfEmailInList);
+	public Customer getCustomerInUsersByEmail(int indexOfEmailInList, int indexOfCustomerInList) {
+		String email = getEmailInRegisterEmail(indexOfEmailInList);
 		return getUserByEmail(email).getCustomer().get(indexOfCustomerInList);
 	}
 
 	public Customer getCustomerByCustomerID(String customerID) {
-		userList = getUserData();
+		userList = getUsersData();
 		for (User user : userList) {
 			for (Customer cus : user.getCustomer()) {
 				if (cus.getCustomerID().equalsIgnoreCase(customerID)) {
@@ -145,13 +146,13 @@ public class JsonDataReader {
 		return null;
 	}
 
-	public String getEmailInList(int indexOfEmailInList) {
+	public String getEmailInRegisterEmail(int indexOfEmailInList) {
 		emailList = FileReaderManager.getInstance().getJsonReader().getEmailData();
 		return emailList.get(indexOfEmailInList).getEmailID();
 	}
 
 	public Account getAccountByAccountID(String accountID) {
-		accountList = getAccountData();
+		accountList = getAccountsData();
 		for (Account acc : accountList) {
 			if (acc.getAccountID().equalsIgnoreCase(accountID)) {
 				return acc;
@@ -161,7 +162,7 @@ public class JsonDataReader {
 	}
 
 	public List<Account> getAccountByCustomerID(String customerID) {
-		accountList = getAccountData();
+		accountList = getAccountsData();
 		List<Account> newList = new ArrayList<Account>();
 		for (Account acc : accountList) {
 			if (acc.getCustomerID().equalsIgnoreCase(customerID)) {
@@ -170,9 +171,9 @@ public class JsonDataReader {
 		}
 		return newList;
 	}
-	
-	public List<Account> getAccountData() {
-		return getAccountData(accountFilePath);
+
+	public List<Account> getAccountsData() {
+		return getAccountData(accountsFilePath);
 	}
 
 	public List<Account> getNewAccountData() {
@@ -201,7 +202,7 @@ public class JsonDataReader {
 		return getTransactionData(transactionFilePath);
 	}
 
-	public List<Transaction> getTransactionOuput() {
+	public List<Transaction> getTransactionsOuput() {
 		return getTransactionData(transactionsFilePath);
 	}
 

@@ -51,7 +51,7 @@ public class NewCustomerPageObject extends AbstractPage{
 		isDataInTableRowEquals(driver, "Email", randomEmail);
 	}
 	
-	public Customer saveNewCustomerInfo() {
+	public Customer getNewCustomerInfo() {
 		Customer customer = new Customer();
 		customer.setCustomerID(getDynamicDataInTable(driver, "Customer ID"));
 		customer.setCustomerName(getDynamicDataInTable(driver, "Customer Name"));

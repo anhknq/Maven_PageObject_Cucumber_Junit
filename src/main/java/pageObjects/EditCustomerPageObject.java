@@ -40,7 +40,7 @@ public class EditCustomerPageObject extends AbstractPage {
 		isDataInTableRowEquals(driver, "Email", randomEmail);
 	}
 
-	public Customer saveEditCustomerInfo() {
+	public Customer getEditCustomerInfo() {
 		Customer customer = new Customer();
 		customer.setCustomerID(getDynamicDataInTable(driver, "Customer ID"));
 		customer.setCustomerName(getDynamicDataInTable(driver, "Customer Name"));

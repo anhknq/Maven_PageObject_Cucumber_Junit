@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import dataProvider.FileReaderManager;
@@ -24,22 +25,26 @@ public class NewAccountPageSteps{
 		newAccountPage = PageFactoryManager.getNewAccountPage(driver);
 	}
 	
-	@When("^enter New Account details (\\d+)$")
-	public void enterNewAccountDetails(int index) {
+	@Given("^read data NewAccount$")
+	public void readDataNewAccount() {
 		customerID = FileReaderManager.getInstance().getJsonReader().getCustomerIDByEmail(0, 0);
 		newAccountList = FileReaderManager.getInstance().getJsonReader().getNewAccountData();
+	}
+	
+	@When("^enter New Account details (\\d+)$")
+	public void enterNewAccountDetails(int index) {
 		newAccountPage.enterNewAccountDetails(customerID,newAccountList.get(index));
 	}
 
 	@Then("^verify Created Account details (\\d+)$")
 	public void verifyCreatedAccountDetails(int index) {
-		firstCustomer = FileReaderManager.getInstance().getJsonReader().getCustomerByEmail(0, 0);
+		firstCustomer = FileReaderManager.getInstance().getJsonReader().getCustomerInUsersByEmail(0, 0);
 		newAccountPage.verifyCreatedAccountDetails(firstCustomer,newAccountList.get(index));
 	}
 
 	@Then("^save New Account Info$")
 	public void saveNewAccountInfo() {
-		Account account = newAccountPage.saveNewAccountInfo();
+		Account account = newAccountPage.getNewAccountInfo();
 		FileReaderManager.getInstance().getJsonWriter().addNewAccount(account);
 	}
 

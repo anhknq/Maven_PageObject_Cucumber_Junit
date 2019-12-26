@@ -36,7 +36,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person_outline</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
@@ -47,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 24, 2019 09:24:18 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 26, 2019 11:00:36 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -63,8 +62,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,7 +73,15 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@register</a></li>
+					<li><a href='#'>@paymentflow</a></li>
+					<li><a href='#'>@newcustomer</a></li>
+					<li><a href='#'>@editcustomer</a></li>
+					<li><a href='#'>@newaccount</a></li>
+					<li><a href='#'>@editaccount</a></li>
+					<li><a href='#'>@deposit</a></li>
 					<li><a href='#'>@deleteaccount</a></li>
+					<li><a href='#'>@deletecustomer</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -117,10 +122,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -131,10 +136,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>11</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -145,10 +150,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='9.091%'><span class='strong'>2</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>97</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='9.091%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='81.818%'>18</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -166,11 +171,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>DELETE ACCOUNT</span>
-						<span class='test-time'>Dec 24, 2019 09:24:49 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>REGISTER</span>
+						<span class='test-time'>Dec 26, 2019 11:00:46 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -180,174 +185,608 @@
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='scenario node' test-id='2' status='pass'>
-    <span class='duration right label'>0h 2m 40s+966ms</span>
+    <div class='category-list'>
+        <span class='category label'>@paymentflow</span>
+    </div>
+    <span class='duration right label'>0h 0m 12s+108ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Login to system</div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Register and Login to system</div>
     </div>
     <ul class='steps'>
-        <li test-id='3' class='node when pass' status='pass'>
+        <li test-id='3' class='node given pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given get Login page Url</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='4' class='node when pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When click Here link</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='5' class='node then pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify Register page displayed</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='6' class='node when pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When read data RegisterEmail</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='7' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And enter email</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='8' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click Submit button at Register page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='9' class='node then pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then get Login info</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='10' class='node given pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open Login page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='11' class='node when pass' status='pass'>
             <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter Login info</div>
                 <div class="node-step">passed</div>
         </li>
-        <li test-id='4' class='node and pass' status='pass'>
+        <li test-id='12' class='node and pass' status='pass'>
             <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click Login button at Login page</div>
                 <div class="node-step">passed</div>
         </li>
     </ul>
 </div>
-<div class='scenariooutline node' test-id='5' status='fail'>
-    <span class='duration right label'>0h 0m 17s+109ms</span>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>ADD NEW CUSTOMER</span>
+						<span class='test-time'>Dec 26, 2019 11:00:58 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenariooutline node' test-id='14' status='pass'>
+    <span class='duration right label'>0h 0m 22s+854ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: Delete all account of an customer and check deleted successfully</div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Create 2 customers and check created successfully</div>
     </div>
     <ul class='steps'>
-        <li test-id='6' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Delete all account of an customer and check deleted successfully</div>
+        <li test-id='15' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Create 2 customers and check created successfully</div>
             <ul class='gc steps'>
-                    <li test-id='7' class='gc given fail' status='fail'>
-                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Given open "Delete Account" page</h6>
-                            <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=79.0.3945.88)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANHKIEU', ip: '192.168.1.127', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANH\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1faea55d742dc783a39033d9c9f52cf7
-*** Element info: {Using=xpath, value=//a[text()='Delete Account']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at commons.AbstractPage.waitForElementVisible(AbstractPage.java:96)
-	at pageObjects.DynamicPageObject.openDynamicPageLinks(DynamicPageObject.java:47)
-	at stepDefinitions.DynamicPageSteps.openPage(DynamicPageSteps.java:60)
-	at ✽.Given open "Delete Account" page(T10_delete_account.feature:13)
-</textarea>
-                                                </li>
-                    <li test-id='8' class='gc when skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When enter AccountID at Delete Account page 0</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='16' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given read data NewCustomer_Input</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='9' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And click "Submit" button</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='17' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And open "New Customer" page</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='10' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then verify alert message "Do you really want to delete this Account?" displayed and accept</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='18' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter New Customer details 0</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='11' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And verify alert message "Account Deleted Sucessfully" displayed and accept</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='19' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='12' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And delete account 0</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='20' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And sleep 3 seconds</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='13' class='gc given skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given open "Edit Account" page</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='21' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify message on page "New Customer" displayed</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='14' class='gc when skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When enter Deleted AccountID at Edit Account page</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='22' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify registered Customer details 0</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='15' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And click "Submit" button</h6>
-                            <div class="node-step">skipped</div>
-                    </li>
-                    <li test-id='16' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then verify alert message "Account does not exist" displayed and accept</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='23' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And save New Customer Info</h6>
+                            <div class="node-step">passed</div>
                     </li>
             </ul>
         </li>
-        <li test-id='17' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Delete all account of an customer and check deleted successfully</div>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>EDIT CUSTOMER</span>
+						<span class='test-time'>Dec 26, 2019 11:01:21 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenariooutline node' test-id='25' status='pass'>
+    <span class='duration right label'>0h 0m 25s+535ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Edit customer and check edited successfully</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='26' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Edit customer and check edited successfully</div>
             <ul class='gc steps'>
-                    <li test-id='18' class='gc given fail' status='fail'>
-                        <h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Given open "Delete Account" page</h6>
-                            <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=79.0.3945.88)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANHKIEU', ip: '192.168.1.127', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANH\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1faea55d742dc783a39033d9c9f52cf7
-*** Element info: {Using=xpath, value=//a[text()='Delete Account']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at commons.AbstractPage.waitForElementVisible(AbstractPage.java:96)
-	at pageObjects.DynamicPageObject.openDynamicPageLinks(DynamicPageObject.java:47)
-	at stepDefinitions.DynamicPageSteps.openPage(DynamicPageSteps.java:60)
-	at ✽.Given open "Delete Account" page(T10_delete_account.feature:13)
-</textarea>
-                                                </li>
-                    <li test-id='19' class='gc when skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When enter AccountID at Delete Account page 1</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='27' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given read data EditCustomer</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='20' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And click "Submit" button</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='28' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And open "Edit Customer" page</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='21' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then verify alert message "Do you really want to delete this Account?" displayed and accept</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='29' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter CustomerID at Edit Customer page 0</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='22' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And verify alert message "Account Deleted Sucessfully" displayed and accept</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='30' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='23' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And delete account 1</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='31' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And enter Edit Customer details 0</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='24' class='gc given skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given open "Edit Account" page</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='32' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='25' class='gc when skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When enter Deleted AccountID at Edit Account page</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='33' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And sleep 5 seconds</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='26' class='gc and skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And click "Submit" button</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='34' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify message on page "Edit Customer" displayed</h6>
+                            <div class="node-step">passed</div>
                     </li>
-                    <li test-id='27' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then verify alert message "Account does not exist" displayed and accept</h6>
-                            <div class="node-step">skipped</div>
+                    <li test-id='35' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify Updated Customer details 0</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='36' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And save Edit Customer Info</h6>
+                            <div class="node-step">passed</div>
                     </li>
             </ul>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>ADD NEW ACCOUNT</span>
+						<span class='test-time'>Dec 26, 2019 11:01:47 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenariooutline node' test-id='38' status='pass'>
+    <span class='duration right label'>0h 0m 23s+388ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='39' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</div>
+            <ul class='gc steps'>
+                    <li test-id='40' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given read data NewAccount</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='41' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And open "New Account" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='42' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter New Account details 0</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='43' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='44' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify message on page "New Account" displayed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='45' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify Created Account details 0</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='46' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And save New Account Info</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='47' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</div>
+            <ul class='gc steps'>
+                    <li test-id='48' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given read data NewAccount</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='49' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And open "New Account" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='50' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter New Account details 1</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='51' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='52' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify message on page "New Account" displayed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='53' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify Created Account details 1</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='54' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And save New Account Info</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='55'>
+					<div class='test-heading'>
+						<span class='test-name'>EDIT ACCOUNT</span>
+						<span class='test-time'>Dec 26, 2019 11:02:10 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='56' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@paymentflow</span>
+    </div>
+    <span class='duration right label'>0h 0m 21s+508ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Edit first account and check type of Account is 'Current'</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='57' class='node given pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open "Edit Account" page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='58' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And enter AccountID at Edit Account page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='59' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='60' class='node when pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter Edit Account details</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='61' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='62' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And sleep 5 seconds</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='63' class='node then pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify message on page "Edit Account" displayed</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='64' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify Updated Account details</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='65' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And save Edit Account Info</div>
+                <div class="node-step">passed</div>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='66'>
+					<div class='test-heading'>
+						<span class='test-name'>DEPOSIT</span>
+						<span class='test-time'>Dec 26, 2019 11:02:32 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenariooutline node' test-id='67' status='pass'>
+    <span class='duration right label'>0h 0m 24s+497ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Transfer money into a current account and check account balance equal 55,000</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='68' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Transfer money into a current account and check account balance equal 55,000</div>
+            <ul class='gc steps'>
+                    <li test-id='69' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given read data Transaction input</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='70' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And open "Deposit" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='71' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter Deposit details 0</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='72' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='73' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify message on page Deposit displayed 0</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='74' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And update Balance of Account 0</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='75' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify Deposit details 0</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='76' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And save Transaction info</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='77' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Transfer money into a current account and check account balance equal 55,000</div>
+            <ul class='gc steps'>
+                    <li test-id='78' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given read data Transaction input</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='79' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And open "Deposit" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='80' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter Deposit details 1</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='81' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='82' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify message on page Deposit displayed 1</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='83' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And update Balance of Account 1</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='84' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify Deposit details 1</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='85' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And save Transaction info</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='86'>
+					<div class='test-heading'>
+						<span class='test-name'>DELETE ACCOUNT</span>
+						<span class='test-time'>Dec 26, 2019 11:02:56 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenariooutline node' test-id='87' status='pass'>
+    <span class='duration right label'>0h 0m 22s+470ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Delete all account of an customer and check deleted successfully</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='88' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Delete all account of an customer and check deleted successfully</div>
+            <ul class='gc steps'>
+                    <li test-id='89' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open "Delete Account" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='90' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter AccountID at Delete Account page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='91' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='92' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify alert message "Do you really want to delete this Account?" displayed and accept</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='93' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify alert message "Account Deleted Sucessfully" displayed and accept</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='94' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And delete account</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='95' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open "Edit Account" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='96' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter Deleted AccountID at Edit Account page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='97' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='98' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify alert message "Account does not exist" displayed and accept</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='99' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Delete all account of an customer and check deleted successfully</div>
+            <ul class='gc steps'>
+                    <li test-id='100' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open "Delete Account" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='101' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter AccountID at Delete Account page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='102' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='103' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify alert message "Do you really want to delete this Account?" displayed and accept</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='104' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify alert message "Account Deleted Sucessfully" displayed and accept</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='105' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And delete account</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='106' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open "Edit Account" page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='107' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter Deleted AccountID at Edit Account page</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='108' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='109' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify alert message "Account does not exist" displayed and accept</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='110'>
+					<div class='test-heading'>
+						<span class='test-name'>DELETE CUSTOMER</span>
+						<span class='test-time'>Dec 26, 2019 11:03:19 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='111' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@paymentflow</span>
+    </div>
+    <span class='duration right label'>0h 0m 10s+717ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Delete first customer and check deleted successfully</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='112' class='node given pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open "Delete Customer" page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='113' class='node when pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter CustomerID at Delete Customer page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='114' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='115' class='node then pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify alert message "Do you really want to delete this Customer?" displayed and accept</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='116' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify alert message "Customer deleted Successfully" displayed and accept</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='117' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And delete customer</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='118' class='node given pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given open "Edit Customer" page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='119' class='node when pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enter Deleted CustomerID at Edit Customer page</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='120' class='node and pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click "Submit" button</div>
+                <div class="node-step">passed</div>
+        </li>
+        <li test-id='121' class='node then pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then verify alert message "Customer does not exist!!" displayed and accept</div>
+                <div class="node-step">passed</div>
         </li>
     </ul>
 </div>
@@ -393,15 +832,15 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@deleteaccount</span>
+						<span class='category-name'>@register</span>
 						<span class='category-status right'>
-						<span class='label fail'>3</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -415,19 +854,363 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 24, 2019 09:24:49 PM</td>
-										<td class='linked' test-id='1'>DELETE ACCOUNT</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 26, 2019 11:00:46 AM</td>
+										<td class='linked' test-id='1'>REGISTER</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@paymentflow</span>
+						<span class='category-status right'>
+						<span class='label pass'>11</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 11</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:00:46 AM</td>
+										<td class='linked' test-id='2'>REGISTER.Register and Login to system</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 24, 2019 09:27:30 PM</td>
-										<td class='linked' test-id='6'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 26, 2019 11:00:58 AM</td>
+										<td class='linked' test-id='15'>ADD NEW CUSTOMER.Create 2 customers and check created successfully.Create 2 customers and check created successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 24, 2019 09:27:41 PM</td>
-										<td class='linked' test-id='17'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 26, 2019 11:01:21 AM</td>
+										<td class='linked' test-id='26'>EDIT CUSTOMER.Edit customer and check edited successfully.Edit customer and check edited successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:01:47 AM</td>
+										<td class='linked' test-id='39'>ADD NEW ACCOUNT.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:01:59 AM</td>
+										<td class='linked' test-id='47'>ADD NEW ACCOUNT.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:10 AM</td>
+										<td class='linked' test-id='56'>EDIT ACCOUNT.Edit first account and check type of Account is 'Current'</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:32 AM</td>
+										<td class='linked' test-id='68'>DEPOSIT.Transfer money into a current account and check account balance equal 55,000.Transfer money into a current account and check account balance equal 55,000</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:44 AM</td>
+										<td class='linked' test-id='77'>DEPOSIT.Transfer money into a current account and check account balance equal 55,000.Transfer money into a current account and check account balance equal 55,000</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:56 AM</td>
+										<td class='linked' test-id='88'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:03:08 AM</td>
+										<td class='linked' test-id='99'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:03:19 AM</td>
+										<td class='linked' test-id='111'>DELETE CUSTOMER.Delete first customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@newcustomer</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:00:58 AM</td>
+										<td class='linked' test-id='13'>ADD NEW CUSTOMER</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:00:58 AM</td>
+										<td class='linked' test-id='15'>ADD NEW CUSTOMER.Create 2 customers and check created successfully.Create 2 customers and check created successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@editcustomer</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:01:21 AM</td>
+										<td class='linked' test-id='24'>EDIT CUSTOMER</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:01:21 AM</td>
+										<td class='linked' test-id='26'>EDIT CUSTOMER.Edit customer and check edited successfully.Edit customer and check edited successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@newaccount</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:01:47 AM</td>
+										<td class='linked' test-id='37'>ADD NEW ACCOUNT</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:01:47 AM</td>
+										<td class='linked' test-id='39'>ADD NEW ACCOUNT.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:01:59 AM</td>
+										<td class='linked' test-id='47'>ADD NEW ACCOUNT.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@editaccount</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:02:10 AM</td>
+										<td class='linked' test-id='55'>EDIT ACCOUNT</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@deposit</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:02:32 AM</td>
+										<td class='linked' test-id='66'>DEPOSIT</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:32 AM</td>
+										<td class='linked' test-id='68'>DEPOSIT.Transfer money into a current account and check account balance equal 55,000.Transfer money into a current account and check account balance equal 55,000</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:44 AM</td>
+										<td class='linked' test-id='77'>DEPOSIT.Transfer money into a current account and check account balance equal 55,000.Transfer money into a current account and check account balance equal 55,000</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@deleteaccount</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:02:56 AM</td>
+										<td class='linked' test-id='86'>DELETE ACCOUNT</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:56 AM</td>
+										<td class='linked' test-id='88'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:03:08 AM</td>
+										<td class='linked' test-id='99'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@deletecustomer</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 26, 2019 11:03:19 AM</td>
+										<td class='linked' test-id='110'>DELETE CUSTOMER</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -443,127 +1226,7 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.WebDriverException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Dec 24, 2019 09:27:30 PM</td>
-										<td class='linked' test-id='7'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully.Given open "Delete Account" page</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=79.0.3945.88)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANHKIEU', ip: '192.168.1.127', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANH\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1faea55d742dc783a39033d9c9f52cf7
-*** Element info: {Using=xpath, value=//a[text()='Delete Account']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at commons.AbstractPage.waitForElementVisible(AbstractPage.java:96)
-	at pageObjects.DynamicPageObject.openDynamicPageLinks(DynamicPageObject.java:47)
-	at stepDefinitions.DynamicPageSteps.openPage(DynamicPageSteps.java:60)
-	at ✽.Given open "Delete Account" page(T10_delete_account.feature:13)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 24, 2019 09:27:41 PM</td>
-										<td class='linked' test-id='18'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully.Given open "Delete Account" page</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=79.0.3945.88)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANHKIEU', ip: '192.168.1.127', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANH\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1faea55d742dc783a39033d9c9f52cf7
-*** Element info: {Using=xpath, value=//a[text()='Delete Account']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at commons.AbstractPage.waitForElementVisible(AbstractPage.java:96)
-	at pageObjects.DynamicPageObject.openDynamicPageLinks(DynamicPageObject.java:47)
-	at stepDefinitions.DynamicPageSteps.openPage(DynamicPageSteps.java:60)
-	at ✽.Given open "Delete Account" page(T10_delete_account.feature:13)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='author-view' class='view hide'>
+<!-- category view --><!-- exception view --><div id='author-view' class='view hide'>
 	<section id='controls'>
 		<div class='controls grey lighten-4'>
 			<!-- search -->
@@ -585,14 +1248,13 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 					<div class='author-heading'>
 						<span class='author-name'>QuynhAnh</span>
 						<span class='author-status right'>
-						<span class='label pass'>1</span>
-						<span class='label fail'>2</span>
+						<span class='label pass'>11</span>
 						</span>
 					</div>
 					<div class='author-content hide'>
 						<div class='author-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							<span class='label green accent-4 white-text'>Passed: 11</span>
+							
 							
 						</div>
 						<div class='author-tests'>
@@ -606,19 +1268,59 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 24, 2019 09:24:49 PM</td>
-										<td class='linked' test-id='2'>DELETE ACCOUNT.Login to system</td>
+										<td>Dec 26, 2019 11:00:46 AM</td>
+										<td class='linked' test-id='2'>REGISTER.Register and Login to system</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 24, 2019 09:27:30 PM</td>
-										<td class='linked' test-id='6'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 26, 2019 11:00:58 AM</td>
+										<td class='linked' test-id='15'>ADD NEW CUSTOMER.Create 2 customers and check created successfully.Create 2 customers and check created successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 24, 2019 09:27:41 PM</td>
-										<td class='linked' test-id='17'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 26, 2019 11:01:21 AM</td>
+										<td class='linked' test-id='26'>EDIT CUSTOMER.Edit customer and check edited successfully.Edit customer and check edited successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:01:47 AM</td>
+										<td class='linked' test-id='39'>ADD NEW ACCOUNT.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:01:59 AM</td>
+										<td class='linked' test-id='47'>ADD NEW ACCOUNT.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal.Create two accounts and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:10 AM</td>
+										<td class='linked' test-id='56'>EDIT ACCOUNT.Edit first account and check type of Account is 'Current'</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:32 AM</td>
+										<td class='linked' test-id='68'>DEPOSIT.Transfer money into a current account and check account balance equal 55,000.Transfer money into a current account and check account balance equal 55,000</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:44 AM</td>
+										<td class='linked' test-id='77'>DEPOSIT.Transfer money into a current account and check account balance equal 55,000.Transfer money into a current account and check account balance equal 55,000</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:02:56 AM</td>
+										<td class='linked' test-id='88'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:03:08 AM</td>
+										<td class='linked' test-id='99'>DELETE ACCOUNT.Delete all account of an customer and check deleted successfully.Delete all account of an customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 26, 2019 11:03:19 AM</td>
+										<td class='linked' test-id='111'>DELETE CUSTOMER.Delete first customer and check deleted successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -642,37 +1344,37 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>11</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>22</div>
+					<div class='panel-lead'>97</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 24, 2019 09:24:18 PM</div>
+					<div class='panel-lead'>Dec 26, 2019 11:00:36 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 24, 2019 09:27:54 PM</div>
+			 		<div class='panel-lead'>Dec 26, 2019 11:03:30 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 3m 36s+165ms</div>
+					<div class='panel-lead'>0h 2m 53s+387ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -688,12 +1390,84 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@deleteaccount</td>
+							<td>@register</td>
+							<td>1</td>
 							<td>0</td>
-							<td>3</td>
 							<td>0</td>
 							<td>
-									0%
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@paymentflow</td>
+							<td>11</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@newcustomer</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@editcustomer</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@newaccount</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@editaccount</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@deposit</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@deleteaccount</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@deletecustomer</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
 							</td>
 						</tr>
 					</table>
@@ -707,39 +1481,39 @@ Session ID: 1faea55d742dc783a39033d9c9f52cf7
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+                parentCount: 8,
+				passParent: 8,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
-				childCount: 3,
-				passChild: 1,
-				failChild: 2,
+				exceptionsParent: 0,
+				childCount: 11,
+				passChild: 11,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 2,
-				grandChildCount: 22,
-				passGrandChild: 2,
-				failGrandChild: 2,
+				exceptionsChild: 0,
+				grandChildCount: 97,
+				passGrandChild: 97,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 18,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 20,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "DELETE ACCOUNT":178.187
+			        "REGISTER":12.108,"ADD NEW CUSTOMER":22.854,"EDIT CUSTOMER":25.535,"ADD NEW ACCOUNT":23.388,"EDIT ACCOUNT":21.508,"DEPOSIT":24.497,"DELETE ACCOUNT":22.47,"DELETE CUSTOMER":10.717
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

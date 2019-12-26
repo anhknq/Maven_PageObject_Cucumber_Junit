@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 30063454000,
+              "duration": 9511433600,
               "status": "passed"
             },
             "match": {
@@ -15,31 +15,22 @@
           },
           {
             "result": {
-              "duration": 4294500,
+              "duration": 3998300,
               "status": "passed"
             },
             "match": {
               "location": "Hooks.beforeScenario(Scenario)"
             }
-          },
-          {
-            "result": {
-              "duration": 1557500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.deleteAllFileScreenshot()"
-            }
           }
         ],
-        "line": 7,
-        "name": "Login to system",
+        "line": 8,
+        "name": "Register and Login to system",
         "description": "",
-        "id": "delete-account;login-to-system",
+        "id": "register;register-and-login-to-system",
         "after": [
           {
             "result": {
-              "duration": 248301,
+              "duration": 148700,
               "status": "passed"
             },
             "match": {
@@ -52,10 +43,106 @@
         "steps": [
           {
             "result": {
-              "duration": 2995222100,
+              "duration": 352559700,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
+            "name": "get Login page Url",
+            "match": {
+              "location": "LoginPageSteps.getLoginPageUrl()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2375454800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "click Here link",
+            "match": {
+              "location": "LoginPageSteps.clickHereLink()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171454000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify Register page displayed",
+            "match": {
+              "location": "ResgisterPageSteps.verifyRegisterPageDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13100300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "read data RegisterEmail",
+            "match": {
+              "location": "ResgisterPageSteps.readDataRegisterEmail()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 636850400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "enter email",
+            "match": {
+              "location": "ResgisterPageSteps.enterEmail()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2163836700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "click Submit button at Register page",
+            "match": {
+              "location": "ResgisterPageSteps.clickSubmitButtonAtRegisterPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1352227000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "get Login info",
+            "match": {
+              "location": "ResgisterPageSteps.getLoginInfo()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2572250100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "open Login page",
+            "match": {
+              "location": "DynamicPageSteps.openLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 512823600,
+              "status": "passed"
+            },
+            "line": 17,
             "name": "enter Login info",
             "match": {
               "location": "LoginPageSteps.enterLoginInfo()"
@@ -64,23 +151,45 @@
           },
           {
             "result": {
-              "duration": 157928225901,
+              "duration": 1889876000,
               "status": "passed"
             },
-            "line": 9,
+            "line": 18,
             "name": "click Login button at Login page",
             "match": {
               "location": "LoginPageSteps.clickLoginButtonAtLoginPage()"
             },
             "keyword": "And "
           }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@paymentflow"
+          }
         ]
-      },
+      }
+    ],
+    "name": "REGISTER",
+    "description": "As a user\nI want to register an account\nSo that verify register function work well",
+    "id": "register",
+    "keyword": "Feature",
+    "uri": "T01_register.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@register"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
       {
         "before": [
           {
             "result": {
-              "duration": 188700,
+              "duration": 153500,
               "status": "passed"
             },
             "match": {
@@ -89,33 +198,23 @@
           },
           {
             "result": {
-              "duration": 210999,
+              "duration": 90300,
               "status": "passed"
             },
             "match": {
               "location": "Hooks.beforeScenario(Scenario)"
             }
-          },
-          {
-            "result": {
-              "duration": 444401,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.deleteAllFileScreenshot()"
-            }
           }
         ],
-        "line": 26,
-        "name": "Delete all account of an customer and check deleted successfully",
+        "line": 24,
+        "name": "Create 2 customers and check created successfully",
         "description": "",
-        "id": "delete-account;delete-all-account-of-an-customer-and-check-deleted-successfully;account-index;2",
+        "id": "add-new-customer;create-2-customers-and-check-created-successfully;index-of-customer-in-list;2",
         "after": [
           {
             "result": {
-              "duration": 6018160300,
-              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d79.0.3945.88)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ANHKIEU\u0027, ip: \u0027192.168.1.127\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\ANH\\AppData\\Local\\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 1faea55d742dc783a39033d9c9f52cf7\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\r\n\tat stepDefinitions.Hooks.afterScenario(Hooks.java:73)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:37)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:13)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:31)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:211)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:98)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)\r\n",
-              "status": "failed"
+              "duration": 62100,
+              "status": "passed"
             },
             "match": {
               "location": "Hooks.afterScenario(Scenario)"
@@ -127,22 +226,822 @@
         "steps": [
           {
             "result": {
-              "duration": 4686267701,
-              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d79.0.3945.88)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ANHKIEU\u0027, ip: \u0027192.168.1.127\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\ANH\\AppData\\Local\\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 1faea55d742dc783a39033d9c9f52cf7\n*** Element info: {Using\u003dxpath, value\u003d//a[text()\u003d\u0027Delete Account\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat commons.AbstractPage.waitForElementVisible(AbstractPage.java:96)\r\n\tat pageObjects.DynamicPageObject.openDynamicPageLinks(DynamicPageObject.java:47)\r\n\tat stepDefinitions.DynamicPageSteps.openPage(DynamicPageSteps.java:60)\r\n\tat ✽.Given open \"Delete Account\" page(T10_delete_account.feature:13)\r\n",
-              "status": "failed"
+              "duration": 6152700,
+              "status": "passed"
             },
-            "comments": [
-              {
-                "line": 12,
-                "value": "#1st customer of 1st email in list User"
-              }
-            ],
             "line": 13,
-            "name": "open \"Delete Account\" page",
+            "name": "read data NewCustomer_Input",
+            "match": {
+              "location": "NewCustomerPageSteps.readDataNewCustomer_Input()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1509356300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "open \"New Customer\" page",
             "match": {
               "arguments": [
                 {
-                  "val": "Delete Account",
+                  "val": "New Customer",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3435949200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "enter New Customer details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 27
+                }
+              ],
+              "location": "NewCustomerPageSteps.enterNewCustomerDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2125905300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click \"Submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2999721300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "sleep 3 seconds",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.sleepSeconds(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 114316300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "verify message on page \"New Customer\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "New Customer",
+                  "offset": 24
+                }
+              ],
+              "location": "DynamicPageSteps.verifyMessageOnPageDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6322178600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify registered Customer details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 35
+                }
+              ],
+              "location": "NewCustomerPageSteps.verifyRegisteredCustomerDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6312617900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "save New Customer Info",
+            "match": {
+              "location": "NewCustomerPageSteps.saveNewCustomerInfo()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          },
+          {
+            "line": 1,
+            "name": "@newcustomer"
+          }
+        ]
+      }
+    ],
+    "name": "ADD NEW CUSTOMER",
+    "description": "As a user\r\nI want to create a new customer\r\n  So that verify create new customer function work well",
+    "id": "add-new-customer",
+    "keyword": "Feature",
+    "uri": "T02_new_customer.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@newcustomer"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 133200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 120000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Edit customer and check edited successfully",
+        "description": "",
+        "id": "edit-customer;edit-customer-and-check-edited-successfully;index-of-customer-in-list;2",
+        "after": [
+          {
+            "result": {
+              "duration": 65800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6054000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "read data EditCustomer",
+            "match": {
+              "location": "EditCustomerPageSteps.readDataEditCustomer()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1522723900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "open \"Edit Customer\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Edit Customer",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 236571600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "enter CustomerID at Edit Customer page 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 39
+                }
+              ],
+              "location": "EditCustomerPageSteps.enterCustomerIDAtEditCustomerPage(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1215480300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "click \"Submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2485326700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "enter Edit Customer details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 28
+                }
+              ],
+              "location": "EditCustomerPageSteps.enterEditCustomerDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1996938800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click \"Submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000178000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "sleep 5 seconds",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.sleepSeconds(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 124182100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "verify message on page \"Edit Customer\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Edit Customer",
+                  "offset": 24
+                }
+              ],
+              "location": "DynamicPageSteps.verifyMessageOnPageDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6617094100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "verify Updated Customer details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 32
+                }
+              ],
+              "location": "EditCustomerPageSteps.verifyUpdatedCustomerDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6297859300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "save Edit Customer Info",
+            "match": {
+              "location": "EditCustomerPageSteps.saveEditCustomerInfo()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@paymentflow"
+          },
+          {
+            "line": 1,
+            "name": "@editcustomer"
+          }
+        ]
+      }
+    ],
+    "name": "EDIT CUSTOMER",
+    "description": "As a user\nI want to edit a customer\n  So that verify Edit function work well",
+    "id": "edit-customer",
+    "keyword": "Feature",
+    "uri": "T03_edit_customer.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@editcustomer"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 163300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 102400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Create two accounts and check created successfully, then verify \u0027Current Amount\u0027 and \u0027Initial Deposit\u0027 are equal",
+        "description": "",
+        "id": "add-new-account;create-two-accounts-and-check-created-successfully,-then-verify-\u0027current-amount\u0027-and-\u0027initial-deposit\u0027-are-equal;index-of-account-in-list;2",
+        "after": [
+          {
+            "result": {
+              "duration": 54800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 25882800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "read data NewAccount",
+            "match": {
+              "location": "NewAccountPageSteps.readDataNewAccount()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1975006900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "open \"New Account\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "New Account",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 624330300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "enter New Account details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "NewAccountPageSteps.enterNewAccountDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1677521500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click \"submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84428800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verify message on page \"New Account\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "New Account",
+                  "offset": 24
+                }
+              ],
+              "location": "DynamicPageSteps.verifyMessageOnPageDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4457702300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "verify Created Account details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 31
+                }
+              ],
+              "location": "NewAccountPageSteps.verifyCreatedAccountDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3773509200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "save New Account Info",
+            "match": {
+              "location": "NewAccountPageSteps.saveNewAccountInfo()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          },
+          {
+            "line": 1,
+            "name": "@newaccount"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 87500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 45900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Create two accounts and check created successfully, then verify \u0027Current Amount\u0027 and \u0027Initial Deposit\u0027 are equal",
+        "description": "",
+        "id": "add-new-account;create-two-accounts-and-check-created-successfully,-then-verify-\u0027current-amount\u0027-and-\u0027initial-deposit\u0027-are-equal;index-of-account-in-list;3",
+        "after": [
+          {
+            "result": {
+              "duration": 54300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9229500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "read data NewAccount",
+            "match": {
+              "location": "NewAccountPageSteps.readDataNewAccount()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 633718100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "open \"New Account\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "New Account",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 545604100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "enter New Account details 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                }
+              ],
+              "location": "NewAccountPageSteps.enterNewAccountDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1483735800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click \"submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71644300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verify message on page \"New Account\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "New Account",
+                  "offset": 24
+                }
+              ],
+              "location": "DynamicPageSteps.verifyMessageOnPageDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4163712700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "verify Created Account details 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 31
+                }
+              ],
+              "location": "NewAccountPageSteps.verifyCreatedAccountDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3815671900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "save New Account Info",
+            "match": {
+              "location": "NewAccountPageSteps.saveNewAccountInfo()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          },
+          {
+            "line": 1,
+            "name": "@newaccount"
+          }
+        ]
+      }
+    ],
+    "name": "ADD NEW ACCOUNT",
+    "description": "As a user\r\nI want to create 2 new accounts\r\n  So that verify create new account function work well",
+    "id": "add-new-account",
+    "keyword": "Feature",
+    "uri": "T04_new_account.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@newaccount"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 161900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 106200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Edit first account and check type of Account is \u0027Current\u0027",
+        "description": "",
+        "id": "edit-account;edit-first-account-and-check-type-of-account-is-\u0027current\u0027",
+        "after": [
+          {
+            "result": {
+              "duration": 59300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2797761700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "open \"Edit Account\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Edit Account",
                   "offset": 6
                 }
               ],
@@ -152,27 +1051,20 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 220143800,
+              "status": "passed"
             },
             "line": 14,
-            "name": "enter AccountID at Delete Account page 0",
+            "name": "enter AccountID at Edit Account page",
             "match": {
-              "arguments": [
-                {
-                  "val": "0",
-                  "offset": 39
-                }
-              ],
-              "location": "DeleteAccountPageSteps.enterAccountIDAtDeleteAccountPage(int)"
+              "location": "EditAccountPageSteps.enterAccountIDAtEditAccountPage()"
             },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2980021100,
+              "status": "passed"
             },
             "line": 15,
             "name": "click \"Submit\" button",
@@ -189,91 +1081,22 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 275990600,
+              "status": "passed"
             },
             "line": 16,
-            "name": "verify alert message \"Do you really want to delete this Account?\" displayed and accept",
+            "name": "enter Edit Account details",
             "match": {
-              "arguments": [
-                {
-                  "val": "Do you really want to delete this Account?",
-                  "offset": 22
-                }
-              ],
-              "location": "DynamicPageSteps.verifyAlertMessageDisplayedAndAccept(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 17,
-            "name": "verify alert message \"Account Deleted Sucessfully\" displayed and accept",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Account Deleted Sucessfully",
-                  "offset": 22
-                }
-              ],
-              "location": "DynamicPageSteps.verifyAlertMessageDisplayedAndAccept(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 18,
-            "name": "delete account 0",
-            "match": {
-              "arguments": [
-                {
-                  "val": "0",
-                  "offset": 15
-                }
-              ],
-              "location": "DeleteAccountPageSteps.deleteAccount(int)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 19,
-            "name": "open \"Edit Account\" page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Edit Account",
-                  "offset": 6
-                }
-              ],
-              "location": "DynamicPageSteps.openPage(String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 20,
-            "name": "enter Deleted AccountID at Edit Account page",
-            "match": {
-              "location": "EditAccountPageSteps.enterDeletedAccountIDAtEditAccountPage()"
+              "location": "EditAccountPageSteps.enterEditAccountDetails()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1755474600,
+              "status": "passed"
             },
-            "line": 21,
+            "line": 17,
             "name": "click \"Submit\" button",
             "match": {
               "arguments": [
@@ -288,9 +1111,689 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 5000585700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "sleep 5 seconds",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.sleepSeconds(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 160181500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify message on page \"Edit Account\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Edit Account",
+                  "offset": 24
+                }
+              ],
+              "location": "DynamicPageSteps.verifyMessageOnPageDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4597526700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "verify Updated Account details",
+            "match": {
+              "location": "EditAccountPageSteps.verifyUpdatedAccountDetails()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3688426600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "save Edit Account Info",
+            "match": {
+              "location": "EditAccountPageSteps.saveEditAccountInfo()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          }
+        ]
+      }
+    ],
+    "name": "EDIT ACCOUNT",
+    "description": "As a user\r\nI want to edit an account\r\n  So that verify edit account function work well",
+    "id": "edit-account",
+    "keyword": "Feature",
+    "uri": "T05_edit_account.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@editaccount"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 75100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 45300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Transfer money into a current account and check account balance equal 55,000",
+        "description": "",
+        "id": "deposit;transfer-money-into-a-current-account-and-check-account-balance-equal-55,000;transfer-index;2",
+        "after": [
+          {
+            "result": {
+              "duration": 43700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7142400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "read data Transaction input",
+            "match": {
+              "location": "DepositPageSteps.readDataTransactionInput()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2535555900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "open \"Deposit\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Deposit",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 662419300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "enter Deposit details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 22
+                }
+              ],
+              "location": "DepositPageSteps.enterDepositDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1643928100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click \"Submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 85223200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verify message on page Deposit displayed 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 41
+                }
+              ],
+              "location": "DepositPageSteps.verifyMessageOnPageDepositDisplayed(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8172800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "update Balance of Account 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "DepositPageSteps.updateBalanceOfAccount(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3658691200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify Deposit details 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 23
+                }
+              ],
+              "location": "DepositPageSteps.verifyDepositDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3392399400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "save Transaction info",
+            "match": {
+              "location": "DepositPageSteps.saveTransactionInfo()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          },
+          {
+            "line": 1,
+            "name": "@deposit"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 106700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 74200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Transfer money into a current account and check account balance equal 55,000",
+        "description": "",
+        "id": "deposit;transfer-money-into-a-current-account-and-check-account-balance-equal-55,000;transfer-index;3",
+        "after": [
+          {
+            "result": {
+              "duration": 44300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4088800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "read data Transaction input",
+            "match": {
+              "location": "DepositPageSteps.readDataTransactionInput()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2951099400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "open \"Deposit\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Deposit",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 652281900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "enter Deposit details 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 22
+                }
+              ],
+              "location": "DepositPageSteps.enterDepositDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1788024300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click \"Submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79708800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verify message on page Deposit displayed 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 41
+                }
+              ],
+              "location": "DepositPageSteps.verifyMessageOnPageDepositDisplayed(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7812600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "update Balance of Account 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                }
+              ],
+              "location": "DepositPageSteps.updateBalanceOfAccount(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3467072300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify Deposit details 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 23
+                }
+              ],
+              "location": "DepositPageSteps.verifyDepositDetails(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3510439800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "save Transaction info",
+            "match": {
+              "location": "DepositPageSteps.saveTransactionInfo()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          },
+          {
+            "line": 1,
+            "name": "@deposit"
+          }
+        ]
+      }
+    ],
+    "name": "DEPOSIT",
+    "description": "As a user\r\nI want to tranfer money into an account\r\n  So that verify deposit function work well",
+    "id": "deposit",
+    "keyword": "Feature",
+    "uri": "T06_deposit.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@deposit"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 115300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 72800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Delete all account of an customer and check deleted successfully",
+        "description": "",
+        "id": "delete-account;delete-all-account-of-an-customer-and-check-deleted-successfully;account-index;2",
+        "after": [
+          {
+            "result": {
+              "duration": 87000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2573533700,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 13,
+                "value": "#delete all accounts of 1st customer of 1st email in list User"
+              }
+            ],
+            "line": 14,
+            "name": "open \"Delete Account\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Delete Account",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 225039300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "enter AccountID at Delete Account page",
+            "match": {
+              "location": "DeleteAccountPageSteps.enterAccountIDAtDeleteAccountPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 240892400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click \"Submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2040372500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verify alert message \"Do you really want to delete this Account?\" displayed and accept",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Do you really want to delete this Account?",
+                  "offset": 22
+                }
+              ],
+              "location": "DynamicPageSteps.verifyAlertMessageDisplayedAndAccept(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2023868400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "verify alert message \"Account Deleted Sucessfully\" displayed and accept",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Account Deleted Sucessfully",
+                  "offset": 22
+                }
+              ],
+              "location": "DynamicPageSteps.verifyAlertMessageDisplayedAndAccept(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8670100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "delete account",
+            "match": {
+              "location": "DeleteAccountPageSteps.deleteAccount()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1850600400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "open \"Edit Account\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Edit Account",
+                  "offset": 6
+                }
+              ],
+              "location": "DynamicPageSteps.openPage(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 198322700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "enter Deleted AccountID at Edit Account page",
+            "match": {
+              "location": "EditAccountPageSteps.enterDeletedAccountIDAtEditAccountPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 791205500,
+              "status": "passed"
             },
             "line": 22,
+            "name": "click \"Submit\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Submit",
+                  "offset": 7
+                }
+              ],
+              "location": "DynamicPageSteps.clickButton(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2008821700,
+              "status": "passed"
+            },
+            "line": 23,
             "name": "verify alert message \"Account does not exist\" displayed and accept",
             "match": {
               "arguments": [
@@ -305,6 +1808,10 @@
           }
         ],
         "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          },
           {
             "line": 1,
             "name": "@deleteaccount"
@@ -315,7 +1822,7 @@
         "before": [
           {
             "result": {
-              "duration": 6305000,
+              "duration": 151800,
               "status": "passed"
             },
             "match": {
@@ -324,33 +1831,23 @@
           },
           {
             "result": {
-              "duration": 164200,
+              "duration": 102400,
               "status": "passed"
             },
             "match": {
               "location": "Hooks.beforeScenario(Scenario)"
             }
-          },
-          {
-            "result": {
-              "duration": 712900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.deleteAllFileScreenshot()"
-            }
           }
         ],
-        "line": 27,
+        "line": 28,
         "name": "Delete all account of an customer and check deleted successfully",
         "description": "",
         "id": "delete-account;delete-all-account-of-an-customer-and-check-deleted-successfully;account-index;3",
         "after": [
           {
             "result": {
-              "duration": 6023611499,
-              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d79.0.3945.88)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ANHKIEU\u0027, ip: \u0027192.168.1.127\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\ANH\\AppData\\Local\\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 1faea55d742dc783a39033d9c9f52cf7\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\r\n\tat stepDefinitions.Hooks.afterScenario(Hooks.java:73)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:37)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:13)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:31)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:211)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:98)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)\r\n",
-              "status": "failed"
+              "duration": 47600,
+              "status": "passed"
             },
             "match": {
               "location": "Hooks.afterScenario(Scenario)"
@@ -362,17 +1859,16 @@
         "steps": [
           {
             "result": {
-              "duration": 6028121200,
-              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d79.0.3945.88)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ANHKIEU\u0027, ip: \u0027192.168.1.127\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\ANH\\AppData\\Local\\...}, goog:chromeOptions: {debuggerAddress: localhost:60205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 1faea55d742dc783a39033d9c9f52cf7\n*** Element info: {Using\u003dxpath, value\u003d//a[text()\u003d\u0027Delete Account\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat commons.AbstractPage.waitForElementVisible(AbstractPage.java:96)\r\n\tat pageObjects.DynamicPageObject.openDynamicPageLinks(DynamicPageObject.java:47)\r\n\tat stepDefinitions.DynamicPageSteps.openPage(DynamicPageSteps.java:60)\r\n\tat ✽.Given open \"Delete Account\" page(T10_delete_account.feature:13)\r\n",
-              "status": "failed"
+              "duration": 1474511900,
+              "status": "passed"
             },
             "comments": [
               {
-                "line": 12,
-                "value": "#1st customer of 1st email in list User"
+                "line": 13,
+                "value": "#delete all accounts of 1st customer of 1st email in list User"
               }
             ],
-            "line": 13,
+            "line": 14,
             "name": "open \"Delete Account\" page",
             "match": {
               "arguments": [
@@ -387,29 +1883,22 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 217003100,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "enter AccountID at Delete Account page 1",
+            "line": 15,
+            "name": "enter AccountID at Delete Account page",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 39
-                }
-              ],
-              "location": "DeleteAccountPageSteps.enterAccountIDAtDeleteAccountPage(int)"
+              "location": "DeleteAccountPageSteps.enterAccountIDAtDeleteAccountPage()"
             },
-            "matchedColumns": [
-              0
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 144673700,
+              "status": "passed"
             },
-            "line": 15,
+            "line": 16,
             "name": "click \"Submit\" button",
             "match": {
               "arguments": [
@@ -424,9 +1913,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2009286000,
+              "status": "passed"
             },
-            "line": 16,
+            "line": 17,
             "name": "verify alert message \"Do you really want to delete this Account?\" displayed and accept",
             "match": {
               "arguments": [
@@ -441,9 +1931,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2025380700,
+              "status": "passed"
             },
-            "line": 17,
+            "line": 18,
             "name": "verify alert message \"Account Deleted Sucessfully\" displayed and accept",
             "match": {
               "arguments": [
@@ -458,29 +1949,22 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 18983100,
+              "status": "passed"
             },
-            "line": 18,
-            "name": "delete account 1",
+            "line": 19,
+            "name": "delete account",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 15
-                }
-              ],
-              "location": "DeleteAccountPageSteps.deleteAccount(int)"
+              "location": "DeleteAccountPageSteps.deleteAccount()"
             },
-            "matchedColumns": [
-              0
-            ],
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1568360500,
+              "status": "passed"
             },
-            "line": 19,
+            "line": 20,
             "name": "open \"Edit Account\" page",
             "match": {
               "arguments": [
@@ -495,9 +1979,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 207996100,
+              "status": "passed"
             },
-            "line": 20,
+            "line": 21,
             "name": "enter Deleted AccountID at Edit Account page",
             "match": {
               "location": "EditAccountPageSteps.enterDeletedAccountIDAtEditAccountPage()"
@@ -506,9 +1991,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 748851100,
+              "status": "passed"
             },
-            "line": 21,
+            "line": 22,
             "name": "click \"Submit\" button",
             "match": {
               "arguments": [
@@ -523,9 +2009,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2014089100,
+              "status": "passed"
             },
-            "line": 22,
+            "line": 23,
             "name": "verify alert message \"Account does not exist\" displayed and accept",
             "match": {
               "arguments": [
@@ -540,6 +2027,10 @@
           }
         ],
         "tags": [
+          {
+            "line": 11,
+            "name": "@paymentflow"
+          },
           {
             "line": 1,
             "name": "@deleteaccount"
@@ -558,22 +2049,60 @@
         "name": "@deleteaccount"
       }
     ]
-  }
-]name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\ANH\\AppData\\Local\\...}, goog:chromeOptions: {debuggerAddress: localhost:59813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 10ca0bc0d070f2087c2a89213356214a\n*** Element info: {Using\u003dxpath, value\u003d//a[text()\u003d\u0027Delete Account\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat commons.AbstractPage.waitForElementVisible(AbstractPage.java:96)\r\n\tat pageObjects.DynamicPageObject.openDynamicPageLinks(DynamicPageObject.java:47)\r\n\tat stepDefinitions.DynamicPageSteps.openPage(DynamicPageSteps.java:60)\r\n\tat ✽.Given open \"Delete Account\" page(T10_delete_account.feature:13)\r\n",
-              "status": "failed"
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 214700,
+              "status": "passed"
             },
-            "comments": [
-              {
-                "line": 12,
-                "value": "#1st customer of 1st email in list User"
-              }
-            ],
+            "match": {
+              "location": "Hooks.openAndQuitBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 91800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Delete first customer and check deleted successfully",
+        "description": "",
+        "id": "delete-customer;delete-first-customer-and-check-deleted-successfully",
+        "after": [
+          {
+            "result": {
+              "duration": 115800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1688747800,
+              "status": "passed"
+            },
             "line": 13,
-            "name": "open \"Delete Account\" page",
+            "name": "open \"Delete Customer\" page",
             "match": {
               "arguments": [
                 {
-                  "val": "Delete Account",
+                  "val": "Delete Customer",
                   "offset": 6
                 }
               ],
@@ -583,27 +2112,20 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 212638000,
+              "status": "passed"
             },
             "line": 14,
-            "name": "enter AccountID at Delete Account page 1",
+            "name": "enter CustomerID at Delete Customer page",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 39
-                }
-              ],
-              "location": "DeleteAccountPageSteps.enterAccountIDAtDeleteAccountPage(int)"
+              "location": "DeleteCustomerPageSteps.enterCustomerIDAtDeleteCustomerPage()"
             },
-            "matchedColumns": [
-              0
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 124153900,
+              "status": "passed"
             },
             "line": 15,
             "name": "click \"Submit\" button",
@@ -620,14 +2142,15 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2076810800,
+              "status": "passed"
             },
             "line": 16,
-            "name": "verify alert message \"Do you really want to delete this Account?\" displayed and accept",
+            "name": "verify alert message \"Do you really want to delete this Customer?\" displayed and accept",
             "match": {
               "arguments": [
                 {
-                  "val": "Do you really want to delete this Account?",
+                  "val": "Do you really want to delete this Customer?",
                   "offset": 22
                 }
               ],
@@ -637,14 +2160,15 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2042448400,
+              "status": "passed"
             },
             "line": 17,
-            "name": "verify alert message \"Account Deleted Sucessfully\" displayed and accept",
+            "name": "verify alert message \"Customer deleted Successfully\" displayed and accept",
             "match": {
               "arguments": [
                 {
-                  "val": "Account Deleted Sucessfully",
+                  "val": "Customer deleted Successfully",
                   "offset": 22
                 }
               ],
@@ -654,34 +2178,27 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 67198500,
+              "status": "passed"
             },
             "line": 18,
-            "name": "delete account 1",
+            "name": "delete customer",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 15
-                }
-              ],
-              "location": "DeleteAccountPageSteps.deleteAccount(int)"
+              "location": "DeleteCustomerPageSteps.deleteCustomer()"
             },
-            "matchedColumns": [
-              0
-            ],
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1769869800,
+              "status": "passed"
             },
             "line": 19,
-            "name": "open \"Edit Account\" page",
+            "name": "open \"Edit Customer\" page",
             "match": {
               "arguments": [
                 {
-                  "val": "Edit Account",
+                  "val": "Edit Customer",
                   "offset": 6
                 }
               ],
@@ -691,18 +2208,20 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 209499900,
+              "status": "passed"
             },
             "line": 20,
-            "name": "enter Deleted AccountID at Edit Account page",
+            "name": "enter Deleted CustomerID at Edit Customer page",
             "match": {
-              "location": "EditAccountPageSteps.enterDeletedAccountIDAtEditAccountPage()"
+              "location": "EditCustomerPageSteps.enterDeletedCustomerIDAtEditCustomerPage()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 476262100,
+              "status": "passed"
             },
             "line": 21,
             "name": "click \"Submit\" button",
@@ -719,14 +2238,15 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2014635200,
+              "status": "passed"
             },
             "line": 22,
-            "name": "verify alert message \"Account does not exist\" displayed and accept",
+            "name": "verify alert message \"Customer does not exist!!\" displayed and accept",
             "match": {
               "arguments": [
                 {
-                  "val": "Account does not exist",
+                  "val": "Customer does not exist!!",
                   "offset": 22
                 }
               ],
@@ -737,21 +2257,21 @@
         ],
         "tags": [
           {
-            "line": 1,
-            "name": "@deleteaccount"
+            "line": 11,
+            "name": "@paymentflow"
           }
         ]
       }
     ],
-    "name": "DELETE ACCOUNT",
-    "description": "As a user\nI want to delete accounts\n  So that verify delete account function work well",
-    "id": "delete-account",
+    "name": "DELETE CUSTOMER",
+    "description": "As a user\nI want to delete a customer\n  So that verify edit customer function work well",
+    "id": "delete-customer",
     "keyword": "Feature",
-    "uri": "T10_delete_account.feature",
+    "uri": "T11_delete_customer.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@deleteaccount"
+        "name": "@deletecustomer"
       }
     ]
   }

@@ -1,14 +1,16 @@
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\HomePageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\WithdrawalPageSteps.java
-E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\runners\TestRunner.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\NewAccountPageSteps.java
+E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\DeleteCustomerPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\NewCustomerPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\FundTransferPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\EditCustomerPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\LoginPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\DynamicPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\shareContexts\ShareDataContext.java
+E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\DeleteAccountPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\Hooks.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\EditAccountPageSteps.java
+E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\runners\CucumberTestRunner.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\DepositPageSteps.java
 E:\QC\Selenium\eclipse\work_space\Maven_PageObject_Cucumber_JUnit\src\test\java\stepDefinitions\ResgisterPageSteps.java

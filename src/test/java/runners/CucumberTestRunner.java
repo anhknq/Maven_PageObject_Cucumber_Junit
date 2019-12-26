@@ -20,9 +20,10 @@ import com.vimalselvam.cucumber.listener.Reporter;
 		monochrome = true,
 		dryRun = false,
 		snippets = SnippetType.CAMELCASE,
-		tags = {"@deleteaccount"})
+		tags = {"@paymentflow"}
+		)
 
-public class TestRunner {
+public class CucumberTestRunner {
 	@AfterClass
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
